@@ -1,0 +1,99 @@
+/* Create table about the people and what they do here */
+CREATE TABLE F1_DRIVERS (id INTEGER PRIMARY KEY, 
+    Driver_name TEXT,
+    team_name TEXT, 
+    birthyear TEXT,
+    Races_won TEXT);
+    
+INSERT INTO F1_DRIVERS (Driver_name, team_name, birthyear, Races_won)
+    VALUES ("Max_Verstappen", "RedBullRacing","1997","70");
+INSERT INTO F1_DRIVERS (Driver_name, team_name, birthyear, Races_won)
+    VALUES ("Sergio_Perez", "RedBullRacing","1990","21");
+INSERT INTO F1_DRIVERS (Driver_name, team_name, birthyear, Races_won)
+    VALUES ("Charles_LeClerc", "Ferrari","1997","18");
+INSERT INTO F1_DRIVERS (Driver_name, team_name, birthyear, Races_won)
+    VALUES ("Carlos_Sainz","Ferrari", "1985", "188");
+INSERT INTO F1_DRIVERS (Driver_name, team_name, birthyear, Races_won)
+    VALUES ("George_Russell","Mercedes","1989","32");
+INSERT INTO F1_DRIVERS (Driver_name, team_name, birthyear, Races_won)
+    VALUES ("Lewis_Hamilton","Mercedes","1985","188");
+
+INSERT INTO F1_DRIVERS (Driver_name, team_name, birthyear, Races_won)
+    VALUES ("Lando_Norris", "McLaren", "1999", "6");
+INSERT INTO F1_DRIVERS (Driver_name, team_name, birthyear, Races_won)
+    VALUES ("Daniel_Ricciardo","McLaren","1989", "32");
+    
+INSERT INTO F1_DRIVERS (Driver_name,team_name,birthyear, Races_won)
+    VALUES ("Esteban_Ocon", "Alpine", "1996", "2");
+INSERT INTO F1_DRIVERS (Driver_name, team_name, birthyear, Races_won)
+    VALUES ("Fernando_Alonso", "Alpine", "1981","88");
+INSERT INTO F1_DRIVERS (Driver_name, team_name, birthyear, Races_won)
+    VALUES ("Valterri_Bottas", "AlfaRomeo","1989", "67");
+INSERT INTO F1_DRIVERS (Driver_name, team_name, birthyear, Races_won)
+    VALUES ("Zhou_Guanyu","AlfaRomeo","1999", "0");
+INSERT INTO F1_DRIVERS (Driver_name, team_name, birthyear, Races_won)
+    VALUES ("Kevin_Magnussen", "HaasF1Team","1992","1");
+INSERT INTO F1_DRIVERS (Driver_name, team_name, birthyear, Races_won)
+    VALUES ("Mick_Schumacher", "HaasF1Team","1999","0");
+INSERT INTO F1_DRIVERS (Driver_name, team_name, birthyear, Races_won)
+    VALUES ("Sebastian_Vettel", "Aston_Martin","1987","122");
+INSERT INTO F1_DRIVERS (Driver_name, team_name, birthyear, Races_won)
+    VALUES ("Lance_Stroll", "AstonMartin", "1998","3");
+INSERT INTO F1_DRIVERS (Driver_name, team_name, birthyear, Races_won)
+    VALUES ("Pierre_Gasly","Alphatauri","1996","3");
+INSERT INTO F1_DRIVERS (Driver_name, team_name, birthyear, Races_won)
+    VALUES ("Yuki_tsunoda", "AlphaTauri","2000", "0");
+INSERT INTO F1_DRIVERS (Driver_name, team_name, birthyear,Races_won)
+    VALUES ("Alex_Albon", "Williams","1996", "2");
+INSERT INTO F1_DRIVERS (Driver_name, team_name, birthyear, Races_won)
+    VALUES ("Nicholas_Latifi", "Williams","1995","0");
+
+CREATE TABLE Country (id INTEGER PRIMARY KEY,
+    Driver TEXT,
+    Country TEXT);
+    
+INSERT INTO Country (Driver, Country)
+    VALUES ("Max_Verstappen","Netherlands");
+INSERT INTO Country (Driver, Country)
+    VALUES ("Sergio_Perez","Mexico");
+INSERT INTO Country (Driver, Country)
+    VALUES ("Charles_LeClerc", "Monaco");
+INSERT INTO Country (Driver, Country)
+    VALUES ("Carlos_Sainz", "Spain");
+INSERT INTO Country (Driver, Country)
+    VALUES ("George_Russell","UK");
+INSERT INTO Country (Driver, Country)
+    VALUES ("Lewis_Hamilton", "UK");
+INSERT INTO Country (Driver, Country)
+    VALUES ("Lando_Norris", "UK");
+INSERT INTO Country (Driver, Country)
+    VALUES ("Daniel_Ricciardo","Australia");
+INSERT INTO Country (Driver, Country)
+    VALUES ("Esteban_Ocon","France");
+INSERT INTO Country (Driver, Country)
+    VALUES ("Fernando_Alonso", "Spain");
+INSERT INTO Country (Driver, Country)
+    VALUES ("Valterri_Bottas", "Finland");
+INSERT INTO Country (Driver, Country)
+    VALUES ("Zhou_Guanyu", "China");
+INSERT INTO Country (Driver, Country)
+    VALUES ("Kevin_Magnussen", "Denmark");
+INSERT INTO Country (Driver, Country)
+    VALUES ("Mick_Schumacher","Germany");
+INSERT INTO Country (Driver, Country)
+    VALUES ("Sebastian_Vettel", "Germany");
+INSERT INTO Country (Driver, Country)
+    VALUES ("Lance_Stroll", "Canada");
+INSERT INTO Country (Driver, Country)
+    VALUES ("Pierre_Gasly", "France");
+INSERT INTO Country (Driver, Country)
+    VALUES ("Yuki_tsunoda","Japan");
+INSERT INTO Country (Driver, Country)
+    VALUES ("Alex_Albon","Thailand");
+    INSERT INTO Country (Driver, Country)
+    VALUES ("Nicholas_Latifi", "Canada");
+
+SELECT  F1_DRIVERS.Driver_name, F1_DRIVERS.Races_won, Country.Country FROM F1_DRIVERS
+INNER JOIN Country ON F1_DRIVERS.Driver_name=Country.Driver;
+
+SELECT Driver_name, birthyear FROM F1_DRIVERS ORDER BY birthyear;
